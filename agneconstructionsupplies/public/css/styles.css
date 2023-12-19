@@ -1,0 +1,450 @@
+body {
+    background-color: #f5f5f5c6;
+
+}
+a{
+    text-decoration: none;
+}
+
+.navigation * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.navigation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.navigation .logo {
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin: 10px 0 0 10px;
+}
+
+.navigation .logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.navigation .logo span {
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: none; /* Hide text by default on smaller screens */
+}
+
+.navigation a {
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+
+.navigation .fas {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.navigation .navi-item {
+    position: relative;
+    top: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+    display: none; /* Hide text by default on smaller screens */
+}
+
+.navigation a:hover {
+    background: #eee;
+}
+
+.navigation:hover {
+    width: 280px;
+}
+
+.navigation .logout {
+    position: absolute;
+    bottom: 0;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .navigation .logo span,
+    .navigation .navi-item {
+        display: inline-block; /* Show text for larger screens */
+    }
+}
+
+.checkbox-lg .custom-control-label::before,
+.checkbox-lg .custom-control-label::after {
+    top: 0.8rem;
+    width: 1.55rem;
+    height: 1.55rem;
+}
+
+.checkbox-lg .custom-control-label {
+    padding-top: 13px;
+    padding-left: 6px;
+}
+
+.checkbox-xl .custom-control-label::before,
+.checkbox-xl .custom-control-label::after {
+    top: 1.2rem;
+    width: 1.85rem;
+    height: 1.85rem;
+}
+
+.checkbox-xl .custom-control-label {
+    padding-top: 23px;
+    padding-left: 10px;
+}
+
+@media (max-width: 767px) {
+    .checkout-column {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: auto;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 15px;
+        box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+    /* Adjust the main content to create space for the floating checkout */
+    .col-12.col-md-9 {
+        margin-bottom: 50px; /* Adjust the value as needed for spacing */
+    }
+}
+.removeRow {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.product {
+    background-color: #eee;
+}
+.brand {
+    font-size: 13px;
+}
+.act-price {
+    color: red;
+    font-weight: 700;
+}
+.dis-price {
+    text-decoration: line-through;
+}
+.about {
+    font-size: 14px;
+}
+.color {
+    margin-bottom: 10px;
+}
+label.radio {
+    cursor: pointer;
+}
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+label.radio span {
+    padding: 2px 9px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    color: #ff0000;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+label.radio input:checked + span {
+    border-color: #ff0000;
+    background-color: #ff0000;
+    color: #fff;
+}
+.btn-danger {
+    background-color: #ff0000 !important;
+    border-color: #ff0000 !important;
+}
+.btn-danger:hover {
+    background-color: #da0606 !important;
+    border-color: #da0606 !important;
+}
+.btn-danger:focus {
+    box-shadow: none;
+}
+.cart i {
+    margin-right: 10px;
+}
+
+.btn-back {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+.btn-back:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+}
+
+.btn-back:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+.product-card{
+    transition: 0.2s ease-in-out;
+}
+
+.product-card:hover{
+    transform: scale(1.03);
+}
+
+.back-button {
+    display: block;
+    position: relative;
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    overflow: hidden;
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+  }
+  
+  .back-button:before,
+  .back-button:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 7px;
+  }
+  
+  .back-button:before {
+    border: 4px solid #000000;
+    transition: opacity .4s cubic-bezier(.77, 0, .175, 1) 80ms, transform .5s cubic-bezier(.455, .03, .515, .955) 80ms;
+  }
+  
+  .back-button:after {
+    border: 4px solid #96daf0;
+    transform: scale(1.3);
+    transition: opacity .4s cubic-bezier(.165, .84, .44, 1), transform .5s cubic-bezier(.25, .46, .45, .94);
+    opacity: 0;
+  }
+  
+  .back-button:hover:before,
+  .back-button:focus:before {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity .4s cubic-bezier(.165, .84, .44, 1), transform .5s cubic-bezier(.25, .46, .45, .94);
+  }
+  
+  .back-button:hover:after,
+  .back-button:focus:after {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity .4s cubic-bezier(.77, 0, .175, 1) 80ms, transform .5s cubic-bezier(.455, .03, .515, .955) 80ms;
+  }
+  
+  .back-button-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .back-button-elem {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 17px 18px 0 18px;
+    transform: rotate(180deg);
+    fill: #000000;
+  }
+  
+  .back-button:hover .back-button-box,
+  .back-button:focus .back-button-box {
+    transition: .4s;
+    transform: translateX(-56px);
+  }
+  
+.red-shadow {
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.582); /* Adjust the shadow properties as needed */
+}
+
+
+.page-header { 
+  background: no-repeat; 
+  position: relative; 
+  background-size: cover; 
+}
+.page-caption { 
+  padding-top: 170px; 
+  padding-bottom: 174px; 
+}
+.page-title { 
+  font-size: 46px; 
+  line-height: 1; 
+  color: #ffffff; 
+  font-weight: 600; 
+  text-align: center; 
+}
+
+.card-section { 
+  position: relative; 
+  bottom: 60px; 
+}
+.card-block { 
+  padding: 80px; 
+}
+.section-title { 
+  margin-bottom: 60px; 
+}
+
+.button {
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  background-color: var(--clr);
+  color: #fff;
+  border-radius: 10rem;
+  font-weight: 600;
+  padding: .75rem 1.5rem;
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color .3s;
+}
+
+.button__icon-wrapper {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: var(--clr);
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.button:hover {
+  background-color: #000;
+}
+
+.button:hover .button__icon-wrapper {
+  color: #000;
+}
+
+.button__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.button:hover .button__icon-svg:first-child {
+  transition: transform .3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.button:hover .button__icon-svg--copy {
+  transition: transform .3s ease-in-out .1s;
+  transform: translate(0);
+}
+
+.card-icon {
+    font-size: 32px;
+    line-height: 0;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
